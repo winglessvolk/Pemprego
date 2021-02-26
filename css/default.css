@@ -11,17 +11,23 @@
     font-kerning: normal;
     overflow: hidden;
 }
-
-/* Add a black background color to the top navigation */
+/* colours 
+#F46036
+#5B85AA
+#414770
+#372248
+#171123
+*/
+/*top nav colour and alignment*/
 .topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
+  background-color: #414770;
+  overflow: hidden;
+}
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
-    color: #f2f2f2;
+    color: #5B85AA;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -42,3 +48,7 @@
   hr { display: block; height: 10px;
     border: 0; border-top: 10px solid rgb(82, 103, 223);
     margin: 1em 0; padding: 10px; }
+
+  .main_content {
+    background: color url('/images/front_u9.svg') others;
+  }
