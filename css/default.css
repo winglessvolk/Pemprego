@@ -9,25 +9,29 @@
     -moz-font-feature-settings: "kern=1";
     font-feature-settings: "kern" 1;
     font-kerning: normal;
-    overflow: hidden;
+    /*overflow: hidden; -- this disables scrolling? wtf? */
 }
 /* colours 
 #F46036
-#5B85AA
-#414770
+#5B85AA - bg colour
+#414770 - font colour
 #372248
 #171123
 */
+/* main container */
+.container {
+  padding: 50px
+}
 /*top nav colour and alignment*/
 .topnav {
-  background-color: #414770;
+  background-color: #5B85AA;
   overflow: hidden;
 }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
-    color: #5B85AA;
+    color:#414770 ;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -45,10 +49,53 @@
     background-color: #4CAF50;
     color: white;
   }
-  hr { display: block; height: 10px;
-    border: 0; border-top: 10px solid rgb(82, 103, 223);
-    margin: 1em 0; padding: 10px; }
+  hr { display: block; height: 5px;
+    border: 0; 
+    border-top: 5px solid rgb(82, 103, 223);
+    padding: 1px; }
 
-  .main_content {
-    background: color url('/images/front_u9.svg') others;
-  }
+
+  /* Container needed to position the button. Adjust the width as needed */
+.main {
+  position: relative;
+  width: 100%;
+}
+
+/* Make the image responsive */
+.main img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.main .btn {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.main .btn:hover {
+  background-color: black;
+}
+
+/* gallery containers */
+.gallery{
+  background-color:#5B85AA;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 5vw);
+    grid-gap: 15px;
+}
+/* notes on the grid above 
+copy pasta from the web, "vw" is view width 1fr is a size unit like 1px. Don't tweak the values, everything breaks. Why? [Reasons]
+https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/
+*/
