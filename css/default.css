@@ -1,4 +1,11 @@
-﻿body {
+﻿/* colours - change them to something pretty?
+#F46036 - 
+#5B85AA - bg colour
+#414770 - font colour
+#372248 - 
+#171123 
+*/
+body {
     font-family: 'Source Sans Pro', 'Trebuchet MS', Arial;
     font-size: 14px;
     color: #2c2c2c;
@@ -11,13 +18,30 @@
     font-kerning: normal;
     /*overflow: hidden; -- this disables scrolling? wtf? */
 }
-/* colours 
-#F46036
-#5B85AA - bg colour
-#414770 - font colour
-#372248
-#171123
-*/
+h2 {
+  text-align:center;
+  color:#414770;
+}
+h3 {
+  text-align: center;
+  color:#414770;
+}
+/* btn configs start */
+.button {
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.row .button:hover {
+  background-color: black;
+}
+
+/* btn configs end */
+
 /* main container */
 .container {
   padding: 50px
@@ -86,16 +110,32 @@
 .main .btn:hover {
   background-color: black;
 }
-
-/* gallery containers */
-.gallery{
+/* main content button settings end*/
+/* section start */
+.section { /* not used */
   background-color:#5B85AA;
-  display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 5vw);
-    grid-gap: 15px;
 }
-/* notes on the grid above 
-copy pasta from the web, "vw" is view width 1fr is a size unit like 1px. Don't tweak the values, everything breaks. Why? [Reasons]
-https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/
-*/
+.row {
+  color:#414770;
+  background-color:#5B85AA;
+}
+.column {
+  float: left;
+  width: 33.33%;  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.title {
+  text-align:center;
+  color:#414770;
+  font-size:medium;  
+}
+.news_btn {
+  text-align:center;
+  color:#414770;
+}
