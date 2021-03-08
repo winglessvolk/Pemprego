@@ -8,18 +8,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 //declaring variables
-$tod = "";
+$tod = ""; //time of day
 //functionality for later            
 $time = date("H:i:s");
-if ($time >= "06:00:01") {
+if ($time >= "06:00:01" && <= "13:59:01") {
     $tod = "morning";
-} elseif ($time >= "14:00:01") {
+} elseif ($time >= "14:00:01" && <= "18:59:00") {
     $tod = "Afternoon";
 } elseif ($time >= "19:00:01") {
     $tod = "Night";
 }
-
-
+echo $tod;
+echo $time;
 ?>
  
 <!DOCTYPE html>
@@ -35,7 +35,7 @@ if ($time >= "06:00:01") {
 <body>
     <div class="container">
     <div>
-            <h1><?php echo $tod; ?>, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+            <h1>Good <?php echo $tod; ?>, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
         </div>
         <!-- navigation -->
         <div>        		
