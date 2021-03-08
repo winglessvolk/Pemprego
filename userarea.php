@@ -21,12 +21,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="css\default.css">
 </head>
 <body>
+    <hr class="hr">
+        <!-- navigation -->
+        <div>        		
+		    <nav class="topnav">			
+  			    <ul class="topnav a">
+				    <li><a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário"/></a></li>    			
+    			    <li><a href="#">Notícias</a></li>
+				    <li><a href="#">Ofertas</a></li>
+				    <li><a href="index.php">Home</a></li>
+				    <li><img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75"></li>				
+  			    </ul>	
+		    </nav>
+        </div>
+        <!-- Navigation end -->
     <br>
-Palavras, palavinhas e palavretas, mas no entanto a página continua do tamanho de uma
-galheta.
-<br>
-<a href="welcome.php"><button>Regressar</button></a>
-<br>
+    <a href="welcome.php"><button>Regressar</button></a>
+    <br>
 
 <a href="newad.php"><button>Novo anuncio</button></a>
 <br>

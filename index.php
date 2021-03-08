@@ -17,7 +17,7 @@
 				<li><a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário"/></a></li>    			
     			<li><a href="#">Notícias</a></li>
 				<li><a href="#">Ofertas</a></li>
-				<li><a href="#">Home</a></li>
+				<li><a href="index.php">Home</a></li>
 				<li><img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75"></li>				
   			</ul>	
 		</nav>

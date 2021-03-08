@@ -27,26 +27,52 @@ if ($time >= "06:00:01") {
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <link rel="stylesheet" href="css\reset.css">
+    <link rel="stylesheet" href="css\default.css">
+    <link rel="stylesheet" href="css\welcome.css">
+
 </head>
 <body>
-    <div class="page-header">
-        <h1>Good <?php echo $tod; ?>, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
-    </div>
+    <div class="container">
     <div>
-        use mee.. use meeeeee!
+            <h1><?php echo $tod; ?>, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
+        </div>
+        <!-- navigation -->
+        <div>        		
+		    <nav class="topnav">			
+  			    <ul class="topnav a">
+                    
+                    <li class="dropdown">
+                    <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
+                            <div class="dropdown-content">
+                                <a href="logout.php">Terminar Sessão</a>
+                                <a href="userarea.php">Conta</a>
+                                <a href="unused.php">Vazio</a>
+                            </div>
+                    </li>                        
+    			    <li><a href="#">Notícias</a></li>
+				    <li><a href="#">Ofertas</a></li>
+				    <li><a href="index.php">Home</a></li>
+				    <li><img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75"></li>				
+  			    </ul>
+                  <br><br>	
+		    </nav>
+        </div>
+        <!-- Navigation end -->
+        <br><br>
+        <hr class="hr">
+        <br><br>
+        <div class="controls">
+        <p> 
+            <a href="reset-password.php" class="button-red">Reset Your Password</a>
+            <a href="logout.php" class="button-yellow">Sign Out of Your Account</a>
+        </p>
+        </div>
+        <br><br>
+        <hr class="hr">
+        <div class="footer">
+        &copy; 2021-<?php echo date("Y");?>
+        </div>
     </div>
-    <div>
-    <a href="userarea.php"><button>Página de teste do token de login</button></a>
-    </div>
-    <br>
-    <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
-    </p>
-    &copy; 2021-<?php echo date("Y");?>
 </body>
 </html>
