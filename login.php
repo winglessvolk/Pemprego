@@ -119,6 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
         </form>
-    </div>    
+    </div> 
+    &copy; 2021-<?php echo date("Y");?>   
 </body>
 </html>

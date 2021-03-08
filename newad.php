@@ -75,6 +75,6 @@ if (empty($_POST["job"])) {
   // one last note, this doesn't send the data to mysql. That's only approached if I can get this to work.
 ?>
 
-
+&copy; 2021-<?php echo date("Y");?>
 </body>
 </html>

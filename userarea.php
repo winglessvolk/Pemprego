@@ -1,4 +1,5 @@
 <?php
+
 // Initialize the session
 session_start();
  
@@ -13,19 +14,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>wlecome <?php $username?> </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-    </style>
+    <title>Bem vindo <?php echo htmlspecialchars($_SESSION["username"]); ?> </title>
+     <!-- the $username doesn't work because the var isn't present in this scope,
+      fixed by including the file that has the var declared -->
+    <link rel="stylesheet" href="css\reset.css">
+    <link rel="stylesheet" href="css\default.css">
 </head>
 <body>
     <br>
-Filler. Lorem ipsum I don't speak japanese.
+Palavras, palavinhas e palavretas, mas no entanto a página continua do tamanho de uma
+galheta.
 <br>
 <a href="welcome.php"><button>Regressar</button></a>
 <br>
-<a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
+
+<a href="newad.php"><button>Novo anuncio</button></a>
 <br>
+<a href="logout.php" class="button">Terminar Sessão</a>
+<br>
+&copy; 2021-<?php echo date("Y");?>
 </body>
 </html>

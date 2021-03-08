@@ -101,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <a class="btn btn-link" href="welcome.php">Cancel</a>
             </div>
         </form>
-    </div>    
+    </div> 
+    &copy; 2021-<?php echo date("Y");?>   
 </body>
 </html>

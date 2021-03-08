@@ -7,6 +7,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+//declaring variables
+$tod = "";
+//functionality for later            
+$time = date("H:i:s");
+if ($time >= "06:00:01") {
+    $tod = "morning";
+} elseif ($time >= "14:00:01") {
+    $tod = "Afternoon";
+} elseif ($time >= "19:00:01") {
+    $tod = "Night";
+}
+
+
 ?>
  
 <!DOCTYPE html>
@@ -21,7 +34,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </head>
 <body>
     <div class="page-header">
-        <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+        <h1>Good <?php echo $tod; ?>, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+    </div>
+    <div>
+        use mee.. use meeeeee!
     </div>
     <div>
     <a href="userarea.php"><button>Página de teste do token de login</button></a>
@@ -31,5 +47,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
         <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
     </p>
+    &copy; 2021-<?php echo date("Y");?>
 </body>
 </html>
