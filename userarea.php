@@ -53,17 +53,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </header>
 
 <!-- fim header -->
-    <div>
-        <br>
-        <a href="welcome.php"><button>Regressar</button></a>
-        <br>
-    </div>
+<hr class="hr">
     <div class="controls">
-        <a href="newad.php"><button>Novo anuncio</button></a>
-        <br>
+        <a href="newad.php" class="button-green">Novo anuncio</a>
+        <br><br><br>
         <a href="reset-password.php" class="button-red">Alterar Palavra-chave</a>
     </div>
-
+<br><br><br>
 &copy; 2021-<?php echo date("Y");?>
+</div>
 </body>
 </html>
