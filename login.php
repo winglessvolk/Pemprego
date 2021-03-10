@@ -91,33 +91,63 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+    <link rel="stylesheet" href="css\reset.css">
+    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="css\auxiliary.css">
+
 </head>
 <body>
-    <div class="wrapper">
+<div class="container">
+<!-- início header -->
+	
+<header>
+		
+        <!-- navigation -->
+        <div>        		
+		    			
+  			    <ul class="ul">                    
+                    <li class="dropdown">
+                    <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
+                            <div class="dropdown-content">
+                                <a href="logout.php">Sair</a>
+                                <a href="userarea.php">Conta</a>
+                                <a href="forum.php">Forum </a>
+                            </div>
+                    </li>                        
+    			    <li><a href="#">Notícias</a></li>
+				    <li><a href="#">Ofertas</a></li>
+				    <li><a href="index.php">Home</a></li>				    
+                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">				
+  			    </ul>
+                  <br><br>	
+		    
+            
+        </div>
+        <!-- Navigation end -->
+		
+</header>
+
+<!-- fim header -->
         <h2>Login</h2>
-        <p>Please fill in your credentials to login.</p>
+        <p>Introduza os seus dados</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Username</label>
+                <label>Nome de Utilizador</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
                 <span class="help-block"><?php echo $username_err; ?></span>
             </div>    
             <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Password</label>
+                <label>Palavra chave</label>
                 <input type="password" name="password" class="form-control">
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="button-green" value="Login">
             </div>
-            <p>Don't have an account? <a href="register.php">Sign up now</a>.</p>
+            <p><a href="register.php">Nova conta?</a></p>
         </form>
     </div> 
     &copy; 2021-<?php echo date("Y");?>   

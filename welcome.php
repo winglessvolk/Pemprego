@@ -7,19 +7,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
+
 //declaring variables
 $tod = ""; //time of day
 //functionality for later            
-$time = date("H:i:s");
-if ($time >= "06:00:01" && <= "13:59:01") {
-    $tod = "morning";
-} elseif ($time >= "14:00:01" && <= "18:59:00") {
-    $tod = "Afternoon";
-} elseif ($time >= "19:00:01") {
-    $tod = "Night";
+$hour = date("H");
+
+//date_default_timezone_set("Lisbon"); set time zone
+if (($hour > 06) && ($hour <= 13)){
+    $tod = "Bom dia ";
+} elseif (($hour > 13) && ($hour <= 17)){
+    $tod = "Boa tarde ";
+} elseif (($hour > 17) && ($hour <= 23)){
+    $tod = "Boa noite ";
+} else {
+    $tod = "Madrugada, ";
 }
-echo $tod;
-echo $time;
+
+
 ?>
  
 <!DOCTYPE html>
@@ -28,44 +33,52 @@ echo $time;
     <meta charset="UTF-8">
     <title>Welcome</title>
     <link rel="stylesheet" href="css\reset.css">
-    <link rel="stylesheet" href="css\default.css">
-    <link rel="stylesheet" href="css\welcome.css">
+    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="css\auxiliary.css">
 
 </head>
 <body>
-    <div class="container">
-    <div>
-            <h1>Good <?php echo $tod; ?>, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b></h1>
-        </div>
+<div class="container">
+<!-- início header -->
+	
+<header>
+		
         <!-- navigation -->
         <div>        		
-		    <nav class="topnav">			
-  			    <ul class="topnav a">
-                    
+		    			
+  			    <ul class="ul">                    
                     <li class="dropdown">
                     <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
                             <div class="dropdown-content">
-                                <a href="logout.php">Terminar Sessão</a>
+                                <a href="logout.php">Sair</a>
                                 <a href="userarea.php">Conta</a>
-                                <a href="unused.php">Vazio</a>
+                                <a href="forum.php">Forum </a>
                             </div>
                     </li>                        
     			    <li><a href="#">Notícias</a></li>
 				    <li><a href="#">Ofertas</a></li>
-				    <li><a href="index.php">Home</a></li>
-				    <li><img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75"></li>				
+				    <li><a href="index.php">Home</a></li>				    
+                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">				
   			    </ul>
                   <br><br>	
-		    </nav>
+		    
+            
         </div>
         <!-- Navigation end -->
+		
+</header>
+
+<!-- fim header -->
+ 
+    <div>
+            <h1><?php echo $tod; ?><b><?php echo htmlspecialchars($_SESSION["username"]); echo ", são agora "; echo date("H:i"); ?></b></h1>
+        </div>
         <br><br>
         <hr class="hr">
         <br><br>
-        <div class="controls">
+        <div>
         <p> 
-            <a href="reset-password.php" class="button-red">Reset Your Password</a>
-            <a href="logout.php" class="button-yellow">Sign Out of Your Account</a>
+            Content here, maybe a picture of a bird.            
         </p>
         </div>
         <br><br>

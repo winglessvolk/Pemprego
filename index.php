@@ -2,7 +2,8 @@
 <html>
 <head>
 	<link rel="stylesheet" href="css\reset.css">
-	<link rel="stylesheet" href="css\default.css">
+	<link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="css\auxiliary.css">
 <meta charset="utf-8">
 <title>Homepage</title>
 </head>
@@ -10,18 +11,32 @@
 <div class="container">
 <!-- início header -->
 	
-	<header>
+<header>
 		
-		<nav class="topnav">			
-  			<ul class="topnav a">
-				<li><a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário"/></a></li>    			
-    			<li><a href="#">Notícias</a></li>
-				<li><a href="#">Ofertas</a></li>
-				<li><a href="index.php">Home</a></li>
-				<li><img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75"></li>				
-  			</ul>	
-		</nav>
-	</header>
+        <!-- navigation -->
+        <div>        		
+		    			
+  			    <ul class="ul">                    
+                    <li class="dropdown">
+                    <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
+                            <div class="dropdown-content">
+                                <a href="logout.php">Sair</a>
+                                <a href="userarea.php">Conta</a>
+                                <a href="forum.php">Forum </a>
+                            </div>
+                    </li>                        
+    			    <li><a href="#">Notícias</a></li>
+				    <li><a href="#">Ofertas</a></li>
+				    <li><a href="index.php">Home</a></li>				    
+                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">				
+  			    </ul>
+                  <br><br>	
+		    
+            
+        </div>
+        <!-- Navigation end -->
+		
+</header>
 
 <!-- fim header -->
 	
