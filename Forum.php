@@ -11,12 +11,12 @@
 <div class="container">
 <!-- início header -->
 	
-	<header>
+<header>
 		
         <!-- navigation -->
         <div>        		
-		    <nav class="topnav">			
-  			    <ul class="topnav a">                    
+		    			
+  			    <ul class="ul">                    
                     <li class="dropdown">
                     <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
                             <div class="dropdown-content">
@@ -31,12 +31,12 @@
                 <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">				
   			    </ul>
                   <br><br>	
-		    </nav>
+		    
             
         </div>
         <!-- Navigation end -->
-
-	</header>
+		
+</header>
 
 <!-- fim header -->
 	

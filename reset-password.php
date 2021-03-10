@@ -75,7 +75,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Mudar a Palavra Chave</title>
-    <a href="css/reset.css">
+    <link rel="stylesheet" href="css\reset.css">
+    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="css\auxiliary.css">
 </head>
 <body>
 <div class="container">
@@ -124,8 +126,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $confirm_password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
-                <a class="btn btn-link" href="welcome.php">Cancelar</a>
+                <input type="submit" class="button-green" value="Submit">
+                <a class="button-yellow" href="welcome.php">Cancelar</a>
             </div>
         </form>
     </div> 
