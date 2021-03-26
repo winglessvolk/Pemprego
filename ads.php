@@ -44,6 +44,9 @@
 
 <!--início main-content-->
     <hr class="hr">
+		<div class="controls">
+				<a href="newad.php" class="button-green">Novo anuncio</a>
+		</div>
 <!--fim main-content-->
 
     <hr class="hr">

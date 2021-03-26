@@ -2,14 +2,14 @@
 
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,13 +24,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
 <div class="container">
 <!-- início header -->
-	
+
 <header>
-		
+
         <!-- navigation -->
-        <div>        		
-		    			
-  			    <ul class="ul">                    
+        <div>
+
+  			    <ul class="ul">
                     <li class="dropdown">
                     <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
                             <div class="dropdown-content">
@@ -38,18 +38,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 <a href="userarea.php">Conta</a>
                                 <a href="forum.php">Forum </a>
                             </div>
-                    </li>                        
+                    </li>
     			    <li><a href="#">Notícias</a></li>
-				    <li><a href="#">Ofertas</a></li>
-				    <li><a href="index.php">Home</a></li>				    
-                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">				
+				    <li><a href="ads.php">Ofertas</a></li>
+				    <li><a href="index.php">Home</a></li>
+                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">
   			    </ul>
-                  <br><br>	
-		    
-            
+                  <br><br>
+
+
         </div>
         <!-- Navigation end -->
-		
+
 </header>
 
 <!-- fim header -->

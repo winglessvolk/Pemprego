@@ -1,7 +1,7 @@
 <?php
 // Initialize the session
 session_start();
- 
+
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
@@ -10,7 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 //declaring variables
 $tod = ""; //time of day
-//functionality for later            
+//functionality for later
 $hour = date("H");
 
 //date_default_timezone_set("Lisbon"); set time zone
@@ -26,7 +26,7 @@ if (($hour > 06) && ($hour <= 13)){
 
 
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +40,13 @@ if (($hour > 06) && ($hour <= 13)){
 <body>
 <div class="container">
 <!-- início header -->
-	
+
 <header>
-		
+
         <!-- navigation -->
-        <div>        		
-		    			
-  			    <ul class="ul">                    
+        <div>
+
+  			    <ul class="ul">
                     <li class="dropdown">
                     <a href="login.php"><img src="images/male.png" width="50px" height="50px" alt="Usuário" class="dropbtn"/></a>
                             <div class="dropdown-content">
@@ -54,22 +54,22 @@ if (($hour > 06) && ($hour <= 13)){
                                 <a href="userarea.php">Conta</a>
                                 <a href="forum.php">Forum </a>
                             </div>
-                    </li>                        
+                    </li>
     			    <li><a href="#">Notícias</a></li>
-				    <li><a href="#">Ofertas</a></li>
-				    <li><a href="index.php">Home</a></li>				    
-                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">				
+				    <li><a href="ads.php">Ofertas</a></li>
+				    <li><a href="index.php">Home</a></li>
+                <img src="images\logo.png" alt="logotipo" class="avatar" height="75" width="75">
   			    </ul>
-                  <br><br>	
-		    
-            
+                  <br><br>
+
+
         </div>
         <!-- Navigation end -->
-		
+
 </header>
 
 <!-- fim header -->
- 
+
     <div>
             <h1><?php echo $tod; ?><b><?php echo htmlspecialchars($_SESSION["username"]); echo ", são agora "; echo date("H:i"); ?></b></h1>
         </div>
@@ -77,8 +77,8 @@ if (($hour > 06) && ($hour <= 13)){
         <hr class="hr">
         <br><br>
         <div>
-        <p> 
-            Content here, maybe a picture of a bird.            
+        <p>
+            Content here, maybe a picture of a bird.
         </p>
         </div>
         <br><br>
