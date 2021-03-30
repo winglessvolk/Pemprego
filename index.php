@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" href="css\reset.css">
 	<link rel="stylesheet" href="css\main.css">
-    <link rel="stylesheet" href="css\auxiliary.css">
+  <link rel="stylesheet" href="css\auxiliary.css">
 <meta charset="utf-8">
 <title>Homepage</title>
 </head>
@@ -14,7 +14,7 @@
 <header>
 
         <!-- navigation -->
-        <div>
+        <div class="navbar">
 
   			    <ul class="ul">
                     <li class="dropdown">
@@ -40,12 +40,9 @@
 
 <!-- fim header -->
 
-	<hr>
-
 <!--início main-content-->
 
 <div class="main">
-
 
 <img src="images/front_u9.svg" alt="Snow">
 <a href="aboutus.php"><button class="btn">Sobre Nós</button></a>
@@ -119,15 +116,16 @@
 				<li><a href="https://www.youtube.com/" target="_blank"></a><b>Youtube</b></li>
 			</ul>
 
-
+		<center>
 		<form>
 			<h4>Contacta-nos</h4>
 				<p><label>Nome</label>&nbsp;<input type="text"></p>
 		  		<p><label>Sobrenome</label>&nbsp;<input type="text"></p>
-		  		<p><label>E-mail</label>&nbsp;<input type="email" name="fn" placeholder="escreve o teu e-mail"></p>
+		  		<p><label>E-mail</label>&nbsp;<input type="email" name="fn"</p>
 		  		<p><label>Assunto&nbsp;&nbsp;</label><textarea name="add" rows="3" wrap="soft"></textarea></p>
 		  		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label><input type="submit">&nbsp;&nbsp;</label><label><input type="reset" value="Apagar"></label></p>
 		</form>
+	</center>
 
 	</div>
 

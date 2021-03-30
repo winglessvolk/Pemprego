@@ -1,9 +1,9 @@
 ﻿/* colours - change them to something pretty?
-#F46036 - 
+#F46036 -
 #5B85AA - bg colour
 #414770 - font colour
-#372248 - 
-#171123 
+#372248 -
+#171123
 */
 body {
     font-family: 'Source Sans Pro', 'Trebuchet MS', Arial;
@@ -11,6 +11,8 @@ body {
     color: #2c2c2c;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /*-webkit-transform: translateZ(0); /* this is supposed to get "position:fixed" ... */
+    /*-webkit-backface-visibility: hidden; /* ... working on chrome */
     -webkit-font-feature-settings: "kern";
     -moz-font-feature-settings: "kern";
     -moz-font-feature-settings: "kern=1";
@@ -46,12 +48,18 @@ h3 {
 .container {
   padding: 50px
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+}
+
 /*top nav colour and alignment*/
 .topnav {
   background-color: #5B85AA;
   overflow: hidden;
 }
-  
+
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
@@ -61,20 +69,20 @@ h3 {
     text-decoration: none;
     font-size: 17px;
   }
-  
+
   /* Change the color of links on hover */
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
-  
+
   /* Add a color to the active/current link */
   .topnav a.active {
     background-color: #4CAF50;
     color: white;
   }
   hr { display: block; height: 5px;
-    border: 0; 
+    border: 0;
     border-top: 5px solid rgb(82, 103, 223);
     padding: 1px; }
 /* nav end */
@@ -83,6 +91,7 @@ h3 {
 .main {
   position: relative;
   width: 100%;
+  margin-top: 60px;
 }
 
 /* Make the image responsive */
@@ -121,7 +130,7 @@ h3 {
 }
 .column {
   float: left;
-  width: 33.33%;  
+  width: 33.33%;
 }
 
 /* Clear floats after the columns */
@@ -133,7 +142,7 @@ h3 {
 .title {
   text-align:center;
   color:#414770;
-  font-size:medium;  
+  font-size:medium;
 }
 .news_btn {
   text-align:center;
