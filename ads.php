@@ -1,11 +1,12 @@
-<!doctype html>
+<?php include_once "config.php"; ?>
+<!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="css\reset.css">
 	<link rel="stylesheet" href="css\main.css">
-    <link rel="stylesheet" href="css\auxiliary.css">
+  <link rel="stylesheet" href="css\auxiliary.css">
 <meta charset="utf-8">
-<title>Forum</title>
+<title>Ofertas</title>
 </head>
 <body>
 <div class="container">
@@ -47,21 +48,22 @@
 				<a href="newad.php" class="button-green">Inserir novo anuncio</a>
 		</div>
 		<hr class="hr">
-<!-- Aqui é suposto apresentrem-se os anúncios da bd, mas nao funciona -->
-		 <?php /*
-		require "config.php";
-		$sql = "SELECT name, job, contacts, description FROM ads";
-		$result = $conn->query($sql);
+<!-- Aqui é suposto apresentarem-se os anúncios da bd, mas nao funciona -->
+		 <?php
+		$sql = "SELECT name, job, contacts, description FROM ads;";
+		$result = mysqli_query($link, $sql);
+		$resultCheck = mysqli_num_rows($result);
 
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc())
-					{
-						echo "<br> Posição: ". $row["job"]. " Empregador: ". $row["name"]. " Descrição: ". $row["description"].
+				if ($resultCheck > 0) {
+					while($row = mysqli_fetch_assoc($result)) {
+						echo "<br> Posição: ". $row["job"]. " Empregador: ". $row["name"]. " Descrição: ". $row["description"];
 					}
-					else { echo "Sem anúncios"};
+				}
+				else {
+					echo "Sem anúncios";
 				}
 
-	*/	?>
+		?>
 <!--fim main-content-->
 
 
