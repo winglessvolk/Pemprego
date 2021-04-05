@@ -28,6 +28,18 @@ h3 {
   text-align: center;
   color:#414770;
 }
+
+h6.adheader {
+  font-size: 100px;
+  color: #414770;
+  font-weight: bold;
+}
+
+.ad {
+  font-size:
+}
+
+
 /* btn configs start */
 .button {
   background-color: #555;

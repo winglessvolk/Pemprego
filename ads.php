@@ -49,6 +49,9 @@
 		</div>
 		<hr class="hr">
 <!-- Aqui é suposto apresentarem-se os anúncios da bd, mas nao funciona -->
+<div class="title">
+	Anúncios Recentes
+</div>
 		 <?php
 		$sql = "SELECT name, job, contacts, description FROM ads;";
 		$result = mysqli_query($link, $sql);
@@ -56,7 +59,7 @@
 
 				if ($resultCheck > 0) {
 					while($row = mysqli_fetch_assoc($result)) {
-						echo "<br> Posição: ". $row["job"]. " Empregador: ". $row["name"]. " Descrição: ". $row["description"];
+						echo $row["job"]. "<br> ". $row["name"]. "<br>". $row["description"]. "<br><br>";
 					}
 				}
 				else {
