@@ -108,6 +108,6 @@ include_once "header.php";
             </div>
         </form>
     </div>
-    &copy; 2021-<?php echo date("Y");?>
+<?php include_once "footer.php" ?>
 </body>
 </html>

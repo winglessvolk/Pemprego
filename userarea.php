@@ -37,7 +37,7 @@ include_once "header.php";
         <a href="reset-password.php" class="button-red">Alterar Palavra-chave</a>
     </div>
 <br><br><br>
-&copy; 2021-<?php echo date("Y");?>
+<?php include_once "footer.php" ?>
 </div>
 </body>
 </html>
